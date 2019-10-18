@@ -1,0 +1,8 @@
+.recipe_box {
+  margin-bottom: 1rem;
+}
+
+.recipe_box:hover {
+  background-color: lightgrey;
+  transition-duration: 1s;
+}
