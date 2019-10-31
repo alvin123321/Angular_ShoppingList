@@ -1,8 +1,12 @@
 <div class="row">
   <div class="col-md-5">
-    <app-recipe-list></app-recipe-list>
+    <app-recipe-list (recipeWasSelected) = "currentRecipt = $event"></app-recipe-list>
   </div>
-  <div class="col-md-7">
-    <app-recipe-detail></app-recipe-detail>
+  <div class="col-md-7" style = "text-align: center">
+    <app-recipe-detail *ngIf = "currentRecipt; else infotext" [recipeDetail] = "currentRecipt">
+    </app-recipe-detail>
+    <ng-template #infotext>
+        <p>Please Select a recipe</p>
+    </ng-template>
   </div>
 </div>
