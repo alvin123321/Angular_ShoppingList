@@ -4,5 +4,8 @@
 
 .recipe_box:hover {
   background-color: lightgrey;
-  transition-duration: 1s;
+}
+
+.center {
+  text-align: center;
 }
