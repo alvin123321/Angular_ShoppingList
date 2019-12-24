@@ -19,14 +19,14 @@ export class RecipeDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
-      this.id = params['id'];
+      this.id = +params['id'];
       this.recipeDetail = this.recipeService.getRecipe(this.id - 1);
     });
   }
 
   addToShoppingList() {
     this.recipeService.addIngredientsToShoppingList(
-      this.recipeDetail.ingerdient
+      this.recipeDetail.ingredient
     );
     alert('Ingredient has been added into shopping cart');
   }
@@ -36,5 +36,13 @@ export class RecipeDetailComponent implements OnInit {
 
     // equalvalient to the below
     // this.router.navigate(['../', this.id, 'edit'], { relativeTo: this.route });
+  }
+
+  onDelete() {
+    const comfirm = confirm('You are about to delete a recipe!');
+    if (comfirm === true) {
+      this.recipeService.deleteRecipe(this.id - 1);
+      this.router.navigate(['/recipes']);
+    }
   }
 }
