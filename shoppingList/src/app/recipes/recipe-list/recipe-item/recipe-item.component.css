@@ -2,3 +2,8 @@
   background-color: rgb(134, 206, 196) !important;
   transition-duration: 0.5s;
 }
+
+.recipe-item {
+  display: flex;
+  justify-content: space-between;
+}
