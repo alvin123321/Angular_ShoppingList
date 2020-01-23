@@ -1,3 +1,4 @@
+import { AuthComponent } from './auth/auth.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
@@ -36,6 +37,7 @@ const routes: Routes = [
     ]
   },
   { path: 'shopping-list', component: ShoppingListComponent },
+  { path: 'auth', component: AuthComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

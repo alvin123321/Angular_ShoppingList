@@ -8,7 +8,5 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   constructor(private dataStorageService: DataStorageService) {}
-  ngOnInit() {
-    this.dataStorageService.fetchRecipes().subscribe();
-  }
+  ngOnInit() {}
 }

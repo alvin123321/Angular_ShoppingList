@@ -8,7 +8,7 @@ import {
 @Directive({
   selector: '[appDropdown]'
 })
-export class DropdownDirective {
+export class DropDownDirective {
   // initially set to false
   @HostBinding('class.open') isOpen = false;
 
