@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
 
+## Feature List
+
+- Custom Directive
+- Services and models
+- Routing / Navigation
+- Subscription/observable
+- Template driven / Reactive form
+- Http request
+- Local Storage
+- Authentication & Route Protection
+- Auto login/logout
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

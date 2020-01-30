@@ -20,7 +20,10 @@ export class DataStorageService {
         'https://ng-course-recipe-book-fcbec.firebaseio.com/recipes.json',
         recipes
       )
-      .subscribe(response => console.log(response));
+      .subscribe(response => {
+        console.log('Send the following object to backend');
+        console.log(response);
+      });
   }
 
   fetchRecipes() {

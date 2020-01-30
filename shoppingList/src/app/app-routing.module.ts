@@ -1,3 +1,4 @@
+import { AuthGard } from './auth/auth.guard';
 import { AuthComponent } from './auth/auth.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {
     path: 'recipes',
     component: RecipesComponent,
+    canActivate: [AuthGard],
     children: [
       { path: '', component: RecipeStartComponent },
       {

@@ -27,7 +27,6 @@ export class AuthComponent {
 
   onSubmit(form: NgForm) {
     if (!form.valid) {
-      console.log('trigger11000');
       return;
     }
     const value = form.value;
@@ -47,7 +46,6 @@ export class AuthComponent {
 
     authObs.subscribe(
       responseData => {
-        console.log(responseData);
         this.isLoading = false;
         this.router.navigate(['/recipes']);
         this.dataStorage.fetchRecipes().subscribe();
