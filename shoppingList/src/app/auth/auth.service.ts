@@ -35,7 +35,7 @@ export class AuthService {
             resData.email,
             resData.localId,
             resData.idToken,
-            120
+            300
           );
         })
       );
@@ -54,7 +54,7 @@ export class AuthService {
             resData.email,
             resData.localId,
             resData.idToken,
-            120
+            300
           );
         })
       );

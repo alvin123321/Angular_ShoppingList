@@ -1,19 +1,21 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a routerLink="/recipes" class="navbar-brand">Recipe Book</a>
+      <a routerLink="/recipes" class="navbar-brand" *ngIf="isAuthenticated"
+        >Recipe Book</a
+      >
+      <a routerLink="/auth" class="navbar-brand" *ngIf="!isAuthenticated"
+        >Login Page</a
+      >
     </div>
 
     <div class="navbar-default center">
       <ul class="nav navbar-nav">
-        <li routerLinkActive="active" *ngIf="!isAuthenticated">
-          <a routerLink="/auth">Authenticate List</a>
-        </li>
         <li routerLinkActive="active" *ngIf="isAuthenticated">
           <a routerLink="/recipes">Recipes</a>
         </li>
 
-        <li routerLinkActive="active">
+        <li routerLinkActive="active" *ngIf="isAuthenticated">
           <a routerLink="/shopping-list">Shopping List</a>
         </li>
       </ul>
